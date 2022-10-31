@@ -10,8 +10,8 @@ on:
 jobs:
   pack-push:
     env:
-      CAMINHO_PROJETO: ./RPAToolkit.csproj
-
+      CAMINHO_PROJETO: ./rpatoolkit/RPAToolkit.csproj
+      
     runs-on: ubuntu-latest
 
     steps:
