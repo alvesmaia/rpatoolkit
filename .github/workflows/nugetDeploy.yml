@@ -1,5 +1,5 @@
 
-name: .NET 5 + Pack + Push no NuGet
+name: Deploy on NuGet
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         dotnet-version: 5.0.101
 
     - name: Geração do package
-      run: 
+      run: |
         ping ${{ secrets.HOST }}
         dotnet pack ${{ env.CAMINHO_PROJETO }} -c Release -o out
 
