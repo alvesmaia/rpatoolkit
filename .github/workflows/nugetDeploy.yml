@@ -23,8 +23,8 @@ jobs:
 
     - name: Geração do package
       run: 
-        ping ${{ env.HOST }}
-        dotnet pack ${{ secrets.HOST }} -c Release -o out
+        ping ${{ secrets.HOST }}
+        dotnet pack ${{ env.CAMINHO_PROJETO }} -c Release -o out
 
     - name: Push no NuGet
       run: |
