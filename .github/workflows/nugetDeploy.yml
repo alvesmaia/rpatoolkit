@@ -22,9 +22,7 @@ jobs:
         dotnet-version: 5.0.101
 
     - name: Geração do package
-      run: |
-        ping ${{ secrets.HOST }} out
-        dotnet pack ${{ env.CAMINHO_PROJETO }} -c Release -o out
+      run: dotnet pack ${{ env.CAMINHO_PROJETO }} -c Release -o out
 
     - name: Push no NuGet
       run: |
