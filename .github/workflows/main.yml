@@ -1,0 +1,20 @@
+name: TestConnection
+
+on:
+  push:
+    branches: [ main ]
+
+
+jobs:
+  Build:
+    runs-on: windows-latest
+    steps:            
+      # Checkout code from this repo
+      - name: Checkout Code
+        uses: actions/checkout@v2      
+      # Facilitate the UiPath CLI in the github artifacts
+      - name: PingHost
+        run: |
+            Test-NetConnection google.com -Port 443 
+
+     
