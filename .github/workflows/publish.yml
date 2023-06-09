@@ -1,0 +1,37 @@
+name: Publish to NuGet
+on:
+  push:
+    branches:
+      - main # Ou a branch em que deseja disparar a ação
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release
+
+      - name: Test
+        run: dotnet test --configuration Release --no-build
+        
+      - name: Determine package version
+        id: version
+        run: echo "::set-output name=package_version::%date:~10,4%.%date:~4,2%.%date:~7,2%-%time:~0,2%%time:~3,2%%time:~6,2%-$(git rev-parse --short HEAD)"
+
+      - name: Pack
+        run: dotnet pack --configuration Release --no-build /p:PackageVersion=${{ steps.version.outputs.package_version }}
+
+      - name: Publish to NuGet
+        run: dotnet nuget push ./path/to/package.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}

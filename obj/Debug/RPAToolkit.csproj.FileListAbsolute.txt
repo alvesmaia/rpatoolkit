@@ -1,0 +1,9 @@
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\bin\Debug\RPAToolkit.dll
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\bin\Debug\RPAToolkit.pdb
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\bin\Debug\Newtonsoft.Json.dll
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\bin\Debug\Newtonsoft.Json.xml
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\obj\Debug\RPAToolkit.csproj.AssemblyReference.cache
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\obj\Debug\RPAToolkit.csproj.CoreCompileInputs.cache
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\obj\Debug\RPAToolkit.csproj.CopyComplete
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\obj\Debug\RPAToolkit.dll
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\obj\Debug\RPAToolkit.pdb

@@ -20,3 +20,12 @@ C:\Users\alvesmaia\source\repos\RPAToolkit\RPAToolkit\obj\Release\RPAToolkit.csp
 C:\Users\alvesmaia\source\repos\RPAToolkit\RPAToolkit\obj\Release\RPAToolkit.csproj.CopyComplete
 C:\Users\alvesmaia\source\repos\RPAToolkit\RPAToolkit\obj\Release\RPAToolkit.dll
 C:\Users\alvesmaia\source\repos\RPAToolkit\RPAToolkit\obj\Release\RPAToolkit.pdb
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\bin\Release\RPAToolkit.dll
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\bin\Release\RPAToolkit.pdb
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\bin\Release\Newtonsoft.Json.dll
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\bin\Release\Newtonsoft.Json.xml
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\obj\Release\RPAToolkit.csproj.AssemblyReference.cache
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\obj\Release\RPAToolkit.csproj.CoreCompileInputs.cache
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\obj\Release\RPAToolkit.csproj.CopyComplete
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\obj\Release\RPAToolkit.dll
+C:\Users\alvesmaia\OneDrive\UiPath\RPAToolkit\rpatoolkit\obj\Release\RPAToolkit.pdb
