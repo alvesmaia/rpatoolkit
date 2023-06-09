@@ -29,14 +29,15 @@ jobs:
       - name: Determine package version
         id: version
         run: |
-          echo "PACKAGE_VERSION=$(date +'%Y.%-m.%-d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+          echo "::set-output name=package_version::$(date +'%Y.%-m.%-d')-$(git rev-parse --short HEAD)"
 
       - name: Print package version
         run: |
-          echo "Package version: ${{ env.PACKAGE_VERSION }}"
+          echo "Package version: ${{ steps.version.outputs.package_version }}"
 
       - name: Pack
-        run: dotnet pack --configuration Release --no-build /p:PackageVersion=${{ env.PACKAGE_VERSION }}
+        run: dotnet pack --configuration Release --no-build /p:PackageVersion=${{ steps.version.outputs.package_version }}
+
 
 
       - name: Publish to NuGet
