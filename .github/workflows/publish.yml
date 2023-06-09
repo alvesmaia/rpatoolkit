@@ -2,7 +2,7 @@ name: Publish to NuGet
 on:
   push:
     branches:
-      - main # Ou a branch em que deseja disparar a ação
+      - main
 
 jobs:
   build:
@@ -12,10 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '6.0'
+      - name: Setup .NET Framework 4.8
+        run: |
+          choco install dotnetframework --version 4.8 --yes
+          refreshenv
 
       - name: Restore dependencies
         run: dotnet restore
@@ -28,10 +28,11 @@ jobs:
         
       - name: Determine package version
         id: version
-        run: echo "::set-output name=package_version::%date:~10,4%.%date:~4,2%.%date:~7,2%-%time:~0,2%%time:~3,2%%time:~6,2%-$(git rev-parse --short HEAD)"
-
+        run: |
+          echo "PACKAGE_VERSION=$(date +'%Y.%-m.%-d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+          
       - name: Pack
-        run: dotnet pack --configuration Release --no-build /p:PackageVersion=${{ steps.version.outputs.package_version }}
+        run: dotnet pack --configuration Release --no-build /p:PackageVersion=${{ env.PACKAGE_VERSION }}
 
       - name: Publish to NuGet
         run: dotnet nuget push ./path/to/package.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
