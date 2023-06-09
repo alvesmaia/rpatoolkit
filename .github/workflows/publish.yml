@@ -33,10 +33,11 @@ jobs:
 
       - name: Print package version
         run: |
-          echo "Package version: $PACKAGE_VERSION"
-          
+          echo "Package version: ${{ env.PACKAGE_VERSION }}"
+
       - name: Pack
         run: dotnet pack --configuration Release --no-build /p:PackageVersion=${{ env.PACKAGE_VERSION }}
+
 
       - name: Publish to NuGet
         run: dotnet nuget push ./path/to/package.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
