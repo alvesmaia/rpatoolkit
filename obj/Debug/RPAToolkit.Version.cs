@@ -11,8 +11,8 @@
 #pragma warning disable CA2243
 
 [assembly: System.Reflection.AssemblyVersionAttribute("0.0.0.0")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.0.61099")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.0+eeab1f5ada")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.0.62558")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.0+f45e3918ed")]
 #if NETSTANDARD || NETFRAMEWORK || NETCOREAPP
 [System.CodeDom.Compiler.GeneratedCode("Nerdbank.GitVersioning.Tasks","3.6.133.12845")]
 #endif
@@ -21,12 +21,12 @@
 #endif
 internal static partial class ThisAssembly {
     internal const string AssemblyConfiguration = "Debug";
-    internal const string AssemblyFileVersion = "0.0.0.61099";
-    internal const string AssemblyInformationalVersion = "0.0.0+eeab1f5ada";
+    internal const string AssemblyFileVersion = "0.0.0.62558";
+    internal const string AssemblyInformationalVersion = "0.0.0+f45e3918ed";
     internal const string AssemblyName = "RPAToolkit";
     internal const string AssemblyVersion = "0.0.0.0";
-    internal static readonly System.DateTime GitCommitDate = new System.DateTime(638218743250000000L, System.DateTimeKind.Utc);
-    internal const string GitCommitId = "eeab1f5ada82e244e4126607efc56b05401fcbe4";
+    internal static readonly System.DateTime GitCommitDate = new System.DateTime(638220187550000000L, System.DateTimeKind.Utc);
+    internal const string GitCommitId = "f45e3918ed6c5e06f8dc285c814f2bfce435a6d1";
     internal const bool IsPrerelease = false;
     internal const bool IsPublicRelease = false;
     internal const string RootNamespace = "RPAToolkit";
