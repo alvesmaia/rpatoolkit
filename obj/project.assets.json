@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.2": {},
+    ".NETFramework,Version=v4.6.2/win": {},
+    ".NETFramework,Version=v4.6.2/win-arm64": {},
+    ".NETFramework,Version=v4.6.2/win-x64": {},
+    ".NETFramework,Version=v4.6.2/win-x86": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.2": [
+      "NuGet.Build.Tasks.Pack >= 6.10.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\alvesmaia\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\rpatoolkit\\RPAToolkit.csproj",
+      "projectName": "RPAToolkit",
+      "projectPath": "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\rpatoolkit\\RPAToolkit.csproj",
+      "packagesPath": "C:\\Users\\alvesmaia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\rpatoolkit\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\alvesmaia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net462"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\CSharp Activities\\RPA Toolkit Packages": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net462": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net462": {
+        "dependencies": {
+          "NuGet.Build.Tasks.Pack": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[6.10.0, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Não é possível encontrar o pacote NuGet.Build.Tasks.Pack com a versão (>= 6.10.0)\r\n  - Encontradas 110 versões em nuget.org [Versão mais próxima: 6.6.0]\r\n  - Encontradas 0 versões em Microsoft Visual Studio Offline Packages\r\n  - Encontradas 0 versões em NUGET LOCAL",
+      "libraryId": "NuGet.Build.Tasks.Pack",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.2",
+        ".NETFramework,Version=v4.6.2/win",
+        ".NETFramework,Version=v4.6.2/win-arm64",
+        ".NETFramework,Version=v4.6.2/win-x64",
+        ".NETFramework,Version=v4.6.2/win-x86"
+      ]
+    }
+  ]
+}

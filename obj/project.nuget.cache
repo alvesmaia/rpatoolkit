@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "8P8505MVvjcB+VQF0fLqCi4kVcb4P1v1LBJXwzzFA8dQ0qibfyc3BiOzcir++UBhk6Ix0I0+/qX6PUWGLlLYpA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\rpatoolkit\\RPAToolkit.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Não é possível encontrar o pacote NuGet.Build.Tasks.Pack com a versão (>= 6.10.0)\r\n  - Encontradas 110 versões em nuget.org [Versão mais próxima: 6.6.0]\r\n  - Encontradas 0 versões em Microsoft Visual Studio Offline Packages\r\n  - Encontradas 0 versões em NUGET LOCAL",
+      "libraryId": "NuGet.Build.Tasks.Pack",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.2",
+        ".NETFramework,Version=v4.6.2/win",
+        ".NETFramework,Version=v4.6.2/win-arm64",
+        ".NETFramework,Version=v4.6.2/win-x64",
+        ".NETFramework,Version=v4.6.2/win-x86"
+      ]
+    }
+  ]
+}

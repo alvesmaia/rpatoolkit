@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\rpatoolkit\\RPAToolkit.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\rpatoolkit\\RPAToolkit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\rpatoolkit\\RPAToolkit.csproj",
+        "projectName": "RPAToolkit",
+        "projectPath": "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\rpatoolkit\\RPAToolkit.csproj",
+        "packagesPath": "C:\\Users\\alvesmaia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\rpatoolkit\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\alvesmaia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net462"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\alvesmaia\\OneDrive\\UiPath\\RPAToolkit\\CSharp Activities\\RPA Toolkit Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net462": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net462": {
+          "dependencies": {
+            "NuGet.Build.Tasks.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.10.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
