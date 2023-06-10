@@ -1,7 +1,7 @@
 @echo off
 
 REM Ler a versão atual do arquivo
-set /p version=<Version.txt
+set /p version=< Version.txt
 echo version
 
 REM Separar as partes da versão
