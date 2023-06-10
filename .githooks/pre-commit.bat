@@ -16,3 +16,5 @@ set /A patch+=1
 
 REM Salvar a nova versão no arquivo
 echo %major%.%minor%.%patch% > Version.txt
+
+exit 0
