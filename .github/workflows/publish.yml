@@ -15,7 +15,7 @@ jobs:
       - name: Download NuGet.exe
         run: |
           $nugetUrl = 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe'
-          $nugetPath = '$(Agent.ToolsDirectory)/nuget.exe'
+          $nugetPath = '$(github.workspace)/tools/nuget.exe'
           Invoke-WebRequest -Uri $nugetUrl -OutFile $nugetPath
 
       - name: Get Tag Version
@@ -23,3 +23,7 @@ jobs:
         run: |
           $tag = git describe --tags --abbrev=0
           echo "::set-output name=tag_version::$tag"
+
+      # Rest of your steps...
+      
+      # You can access the tag version using ${{ steps.get_tag_version.outputs.tag_version }} in subsequent steps.
