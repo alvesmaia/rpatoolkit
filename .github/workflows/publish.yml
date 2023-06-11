@@ -21,8 +21,12 @@ jobs:
       - name: Get Tag Version
         id: get_tag_version
         run: |
-          $tag = git describe --tags --abbrev=0
-          echo "::set-output name=tag_version::$tag"
+          $tag = git tag --sort=v:refname | tail -n 1
+          if [ -z "$tag" ]; then
+            echo "::set-output name=tag_version::"
+          else
+            echo "::set-output name=tag_version::$tag"
+          fi
 
       # Rest of your steps...
       
