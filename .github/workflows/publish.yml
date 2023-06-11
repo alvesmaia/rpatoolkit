@@ -18,16 +18,14 @@ jobs:
           $nugetPath = '${{ env.HOME }}/nuget.exe'
           Invoke-WebRequest -Uri $nugetUrl -OutFile $nugetPath
 
-      - name: Get Tag Version
-        id: get_tag_version
+      - name: Get Package Version
+        id: get_package_version
         run: |
-          $tag = git tag --sort=v:refname | tail -n 1
-          if [ -z "$tag" ]; then
-            echo "::set-output name=tag_version::"
-          else
-            echo "::set-output name=tag_version::$tag"
-          fi
+          $version = [xml]::new()
+          $version.Load('${{ github.workspace }}/package.nuspec')
+          $tagVersion = $version.package.metadata.version
+          echo "::set-output name=tag_version::$tagVersion"
 
       # Rest of your steps...
       
-      # You can access the tag version using ${{ steps.get_tag_version.outputs.tag_version }} in subsequent steps.
+      # You can access the package version using ${{ steps.get_package_version.outputs.tag_version }} in subsequent steps.
