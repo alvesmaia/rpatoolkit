@@ -25,7 +25,3 @@ jobs:
           $version.Load('${{ github.workspace }}/package.nuspec')
           $tagVersion = $version.package.metadata.version
           echo "::set-output name=tag_version::$tagVersion"
-
-      # Rest of your steps...
-      
-      # You can access the package version using ${{ steps.get_package_version.outputs.tag_version }} in subsequent steps.
