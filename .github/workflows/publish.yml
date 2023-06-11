@@ -11,34 +11,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Setup .NET Framework 4.8
-        run: |
-          choco install dotnetframework --version 4.8 --yes
-          refreshenv
-
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --configuration Release
-
-      - name: Test
-        run: dotnet test --configuration Release --no-build
         
-      - name: Determine package version
-        id: version
+      - name: Download NuGet.exe
         run: |
-          echo "::set-output name=package_version::$(date +'%Y.%-m.%-d')-$(git rev-parse --short HEAD)"
+          $nugetUrl = 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe'
+          $nugetPath = '$(Agent.ToolsDirectory)/nuget.exe'
+          Invoke-WebRequest -Uri $nugetUrl -OutFile $nugetPath
 
-      - name: Print package version
+      - name: Get Tag Version
+        id: get_tag_version
         run: |
-          echo "Package version: ${{ steps.version.outputs.package_version }}"
-
-      - name: Pack
-        run: dotnet pack --configuration Release --no-build /p:PackageVersion=${{ steps.version.outputs.package_version }}
-
-
-
-      - name: Publish to NuGet
-        run: dotnet nuget push ./path/to/package.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+          $tag = git describe --tags --abbrev=0
+          echo "::set-output name=tag_version::$tag"
