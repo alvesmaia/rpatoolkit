@@ -25,7 +25,7 @@ jobs:
           $version.Load('${{ github.workspace }}\.nuspec')
           $tagVersion = $version.package.metadata.version
           echo $tagVersion
-          echo "tag_version=$tagVersion" >> $GITHUB_ENV
+          echo "tagVersion=${{ env.tagVersion }}" >> $GITHUB_ENV
           echo ${{ env.tag_version }}
           
       - name: Read Package Version
