@@ -30,8 +30,7 @@ jobs:
       - name: Passo 1
         id: meu_passo
         run: |
-          echo "teste" >> $GITHUB_ENV
-          echo "::set-output name=VAR_SAIDA::$(cat $GITHUB_ENV)"
+         echo "##[set-output name=VAR_SAIDA]teste"
 
       - name: Passo 2
         run: echo "Valor de saída ${{ steps.meu_passo.outputs.VAR_SAIDA }}"
