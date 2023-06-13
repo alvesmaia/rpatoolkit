@@ -33,7 +33,7 @@ jobs:
           $version.Load('${{ github.workspace }}\.nuspec')
           $tagVersion = "$($version.package.metadata.version)"
           echo "Versão atual: $tagVersion"
-          $GITHUB_OUTPUT = "versao=$($tagVersion)"
+          $GITHUB_OUTPUT:versao=$tagVersion"
                             
       - name: Display
         run: |
