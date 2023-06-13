@@ -19,13 +19,13 @@ jobs:
           Invoke-WebRequest -Uri $nugetUrl -OutFile $nugetPath
 
       - name: Get Package Version
-        id: get_package_version
+        id: get_version
         run: |
           $version = [xml]::new()
           $version.Load('${{ github.workspace }}\.nuspec')
-          $tag_version = $version.package.metadata.version
-          echo "Versão atual: $tag_version"
-          echo "versao::$tag_version" >> $GITHUB_OUTPUT
+          echo "Versão atual: $version.package.metadata.version"
+          echo "versao::$version.package.metadata.version" >> $GITHUB_OUTPUT
                             
-      - name: Use the Package Version
-        run: echo ${{ needs.get_package_version.outputs.versao }}
+      - name: Display
+        run: |
+          echo "Step 1 test: ${{ steps.get_version.outputs.versao }}"
