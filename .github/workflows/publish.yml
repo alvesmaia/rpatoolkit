@@ -21,6 +21,14 @@ jobs:
       - name: Get Package Version
         id: get_version
         run: |
+          $nome = "João"
+          $idade = 30
+
+          # Interpolação de string usando o operador -f
+          $saudacao = "Olá, {0}! Você tem {1} anos." -f $nome, $idade
+
+          Write-Host $saudacao
+
           $version = [xml]::new()
           $version.Load('${{ github.workspace }}\.nuspec')
           $tagVersion = "$($version.package.metadata.version)"
