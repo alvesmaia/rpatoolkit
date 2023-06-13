@@ -27,13 +27,13 @@ jobs:
           echo "tagVersion=$tagVersion" >> $GITHUB_ENV
           echo "Forma1: $tagVersion"
           
-          
-          
-          
+
+
+
       - name: Read Package Version
         id: read_package_version
         run: |
-          echo "Forma1: $tagVersion"
+          echo "Forma1: ${{ env.tagVersion}}"
           echo "tag_version=$tagVersion" >> $GITHUB_ENV
           
       - name: Use the Package Version
