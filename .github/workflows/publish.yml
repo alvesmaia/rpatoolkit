@@ -24,7 +24,7 @@ jobs:
           $version = [xml]::new()
           $version.Load('${{ github.workspace }}\.nuspec')
           $tagVersion = $version.package.metadata.version
-          echo ${{ env.tagVersion }}
+          echo $"Valor: {{ env.tagVersion }}"
           
           
           
