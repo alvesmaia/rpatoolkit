@@ -25,10 +25,8 @@ jobs:
           $version.Load('${{ github.workspace }}\.nuspec')
           $tag_version = $version.package.metadata.version
           echo "Versão atual: $tag_version"
-          echo "VERSAO=$tag_version" >> "$GITHUB_OUTPUT"
-          echo "versao=$tag_version" >> "$GITHUB_ENV"
+          echo "versao<<$tag_version" >> "$GITHUB_ENV"
                             
       - name: Use the Package Version
         run: |
-          echo "The package version is ${{ steps.get_package_version.outputs.VERSAO }}"
           echo "The package version is ${{ env.versao }}"
