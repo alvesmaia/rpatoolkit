@@ -26,7 +26,7 @@ jobs:
           $tagVersion = $version.package.metadata.version
           echo "tagVersion=$tagVersion" >> $GITHUB_ENV
           echo "Forma1: $tagVersion"
-          echo "Forma2: ${{ env.b }}"
+          
           
           
           
