@@ -29,11 +29,14 @@ jobs:
           
       - name: Definir variável
         run: |
-          echo "MINHA_VARIAVEL=teste" >> $GITHUB_ENV
-          echo "::set-env name=VARIAVEL_AMBIENTE::$(MINHA_VARIAVEL)"
+          echo "VARIAVEL1=teste" >> $GITHUB_ENV
+          echo "echo ::set-env name=VARIAVEL2::$(VARIAVEL1)" >> env.bat
+          cmd /C env.bat
 
-      - name: Imprimir variável de ambiente
-        run: echo "Valor da variável de ambiente ${{ env.VARIAVEL_AMBIENTE }}"
+      - name: Imprimir variáveis
+        run: |
+          echo "Valor da variável 1: ${{ env.VARIAVEL1 }}"
+          echo "Valor da variável 2: ${{ env.VARIAVEL2 }}"
 
       - name: Read Package Version
         id: read_package_version
