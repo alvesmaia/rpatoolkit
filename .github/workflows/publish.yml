@@ -27,21 +27,10 @@ jobs:
           echo "tagVersion=$tagVersion" >> $GITHUB_ENV
           echo "Forma1: $tagVersion"
           
-      - name: Definir variável
-        run: |
-          echo "VARIAVEL1=teste" >> $GITHUB_ENV
-          echo "echo ::set-env name=VARIAVEL2::$(VARIAVEL1)" >> env.bat
-          cmd /C env.bat
-
-      - name: Imprimir variáveis
-        run: |
-          echo "Valor da variável 1: ${{ env.VARIAVEL1 }}"
-          echo "Valor da variável 2: ${{ env.VARIAVEL2 }}"
-
       - name: Read Package Version
         id: read_package_version
         run: |
-          echo "Forma1: ${{ env.tagVersion}}"
+          echo "Forma1: ${{ env.tagVersion }}"
           echo "tag_version=$tagVersion" >> $GITHUB_ENV
           
       - name: Use the Package Version
