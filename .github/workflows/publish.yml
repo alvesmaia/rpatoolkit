@@ -27,8 +27,16 @@ jobs:
           echo "tagVersion=$tagVersion" >> $GITHUB_ENV
           echo "Forma1: $tagVersion"
           
+      - name: Definir variável de ambiente
+        run: echo "VARIAVEL_AMBIENTE=teste" >> $GITHUB_ENV
 
+      - name: Atribuir variável de ambiente
+        run: |
+          echo "VARIAVEL_AMBIENTE=$VARIAVEL_AMBIENTE" # Verificando o valor antes de atribuir
+          echo "::set-env name=MINHA_VARIAVEL::$VARIAVEL_AMBIENTE"
 
+      - name: Imprimir variável de ambiente
+        run: echo "Valor da variável de ambiente $MINHA_VARIAVEL"
 
       - name: Read Package Version
         id: read_package_version
