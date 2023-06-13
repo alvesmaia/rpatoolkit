@@ -26,10 +26,12 @@ jobs:
           $tagVersion = $version.package.metadata.version
           echo "tagVersion=$tagVersion" >> $GITHUB_ENV
           echo "Forma1: $tagVersion"
+          echo "##[set-output name=VERSAO]$tagVersion"
           
       - name: Passo 1
         id: meu_passo
         run: |
+         echo "Valor de saída ${{ steps.get_package_version.outputs.VERSAO }}"
          echo "##[set-output name=VAR_SAIDA]teste"
 
       - name: Passo 2
