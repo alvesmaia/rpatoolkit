@@ -24,25 +24,9 @@ jobs:
           $version = [xml]::new()
           $version.Load('${{ github.workspace }}\.nuspec')
           $tagVersion = $version.package.metadata.version
-          echo "tagVersion=$tagVersion" >> $GITHUB_ENV
-          echo "Forma1: $tagVersion"
+          echo "Versão atual: $tagVersion"
           echo "##[set-output name=VERSAO]$tagVersion"
-          
-      - name: Passo 1
-        id: meu_passo
-        run: |
-         echo "Valor de saída ${{ steps.get_package_version.outputs.VERSAO }}"
-         echo "##[set-output name=VAR_SAIDA]teste"
-
-      - name: Passo 2
-        run: echo "Valor de saída ${{ steps.meu_passo.outputs.VAR_SAIDA }}"
-          
-      - name: Read Package Version
-        id: read_package_version
-        run: |
-          echo "Forma1: ${{ env.tagVersion }}"
-          echo "tag_version=$tagVersion" >> $GITHUB_ENV
-          
+                            
       - name: Use the Package Version
         run: |
-          echo "The package version is ${{ env.tag_version }}"
+          echo "The package version is ${{ steps.get_package_version.outputs.VERSAO }}"
