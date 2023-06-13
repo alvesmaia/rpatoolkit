@@ -37,4 +37,5 @@ jobs:
                             
       - name: Display
         run: |
+          Write-Host $saudacao
           echo "Step 1 test: ${{ steps.get_version.outputs.versao }}"
