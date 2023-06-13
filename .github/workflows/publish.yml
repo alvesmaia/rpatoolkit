@@ -27,8 +27,9 @@ jobs:
           echo "Versão atual: $TAGVERSION"
           echo "##[set-output name=VERSAO]$TAGVERSION"
           echo "NOVAVERSAO=${{TAGVERSION}}" >> "$GITHUB_OUTPUT"
+          echo "nova_versao=$TAGVERSION" >> "$GITHUB_OUTPUT"
                             
       - name: Use the Package Version
         run: |
           echo "The package version is ${{ steps.get_package_version.outputs.VERSAO }}"
-          echo "Forma2 ${{ steps.get_package_version.outputs.NOVAVERSAO }}"
+          echo "Forma2 ${{ steps.get_package_version.outputs.nova_versao }}"
