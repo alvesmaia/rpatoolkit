@@ -27,6 +27,15 @@ jobs:
           echo "tagVersion=$tagVersion" >> $GITHUB_ENV
           echo "Forma1: $tagVersion"
           
+      - name: Passo 1
+        id: meu_passo
+        run: |
+          echo "teste" >> $GITHUB_ENV
+          echo "::set-output name=VAR_SAIDA::$(cat $GITHUB_ENV)"
+
+      - name: Passo 2
+        run: echo "Valor de saída ${{ steps.meu_passo.outputs.VAR_SAIDA }}"
+          
       - name: Read Package Version
         id: read_package_version
         run: |
