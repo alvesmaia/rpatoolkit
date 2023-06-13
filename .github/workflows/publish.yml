@@ -20,13 +20,13 @@ jobs:
 
       - name: Get Package Version
         id: get_package_version
-        run: 
+        run: |
           $version = [xml]::new()
           $version.Load('${{ github.workspace }}\.nuspec')
           $tagVersion = $version.package.metadata.version
           echo $tagVersion
           echo "tagVersion=${{ env.tagVersion }}" >> $GITHUB_ENV
-          echo ${{ env.tag_version }}
+          echo ${{ env.tagVersion }}
           
       - name: Read Package Version
         id: read_package_version
