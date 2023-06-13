@@ -26,7 +26,9 @@ jobs:
           $tagVersion = $version.package.metadata.version
           echo "Versão atual: $tagVersion"
           echo "##[set-output name=VERSAO]$tagVersion"
+          echo "VERSAO_2=$tagVersion" >> "$GITHUB_OUTPUT"
                             
       - name: Use the Package Version
         run: |
           echo "The package version is ${{ steps.get_package_version.outputs.VERSAO }}"
+          echo "Forma2 ${{ steps.get_package_version.outputs.VERSAO_2 }}"
