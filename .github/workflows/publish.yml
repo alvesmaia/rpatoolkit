@@ -23,7 +23,7 @@ jobs:
         run: |
           $version = [xml]::new()
           $version.Load('${{ github.workspace }}\.nuspec')
-          $tagVersion = $version.package.metadata.version
+          $tagVersion = "$($version.package.metadata.version)"
           echo "Versão atual: $tagVersion"
           echo "versao:: $tagVersion" >> $GITHUB_OUTPUT
                             
