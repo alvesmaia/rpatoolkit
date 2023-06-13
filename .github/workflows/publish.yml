@@ -23,9 +23,9 @@ jobs:
         run: |
           $version = [xml]::new()
           $version.Load('${{ github.workspace }}\.nuspec')
-          echo "Versão atual: $version.package.metadata.version"
-          echo "versao::$version.package.metadata.version" >> $GITHUB_OUTPUT
-          echo "versao::${{version.package.metadata.version }}" >> $GITHUB_OUTPUT
+          echo "Versão atual: ${{ version.package.metadata.version}}"
+          echo "versao::$ {{version.package.metadata.version }}" >> $GITHUB_OUTPUT
+          echo "versao::${{ version.package.metadata.version }}" >> $GITHUB_OUTPUT
                             
       - name: Display
         run: |
